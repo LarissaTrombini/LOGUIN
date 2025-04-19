@@ -1,0 +1,307 @@
+body {
+    margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-image: url('img/fundo.jpg');
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+background-repeat: no-repeat;
+position: relative;
+  }
+  
+
+  .login-container {
+    background: linear-gradient(145deg, #1f2a45, #0e1625); /* Gradiente de fundo */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    z-index: 2;
+    font-family: "Century Gothic", sans-serif; /* Fonte Century Gothic */
+    
+  }
+
+  @keyframes glow {
+    0% {
+      filter: drop-shadow(0 0 10px rgba(0, 123, 255, 0.5));
+    }
+    50% {
+      filter: drop-shadow(0 0 20px rgba(0, 123, 255, 0.8));
+    }
+    100% {
+      filter: drop-shadow(0 0 10px rgba(0, 123, 255, 0.5));
+    }
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto;
+    width: 220px;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  }
+
+  .logo:hover {
+    animation: 
+      balancar 3s infinite ease-in-out,
+      glow 2s infinite ease-in-out;
+  }
+
+  @keyframes balancar {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-5deg); /* Menos intensidade */
+    }
+    50% {
+      transform: rotate(5deg); /* Menos intensidade */
+    }
+    75% {
+      transform: rotate(-5deg); /* Menos intensidade */
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  h2 {
+      text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.0rem; /* Tamanho da fonte bem menor */
+  color: #919da5;
+  font-weight: 300; /* Peso mais fino da fonte */
+  font-family: "Century Gothic", sans-serif; /* Fonte Century Gothic */
+}
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.1);
+    transition: border-color 0.3s ease;
+  }
+
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    border-color: #007bff;
+  }
+
+  button {
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .message {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #e74c3c;
+    text-align: center;
+  }
+
+  /* Botões de WhatsApp no topo direito */
+  .whatsapp-icons {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 10;
+  
+}
+
+.whatsapp-icons a {
+  
+  background: #1e3a5f; /* Azul marinho */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  max-width: 300px; /* Limita a largura para evitar que fique muito largo em telas grandes */
+}
+
+.whatsapp-icons a:hover {
+  background-color: #16344b; /* Azul marinho mais escuro */
+  transform: scale(1.05);
+}
+
+.whatsapp-icons img {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+.whatsapp-icons span {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Ajustes para telas maiores (desktop) */
+@media (min-width: 1024px) {
+  .whatsapp-icons {
+    right: 30px; /* Aumenta a distância do botão da borda direita */
+    top: 40px; /* Distância maior do topo */
+   
+  }
+
+  .whatsapp-icons a {
+    padding: 15px 25px; /* Botões maiores para telas maiores */
+    font-size: 18px; /* Texto maior para desktop */
+  }
+
+  .whatsapp-icons img {
+    width: 36px; /* Ícones maiores */
+    height: 36px;
+  }
+}
+
+  @media (max-width: 768px) {
+    body {
+        background-image: url('img/fundo.jpg');
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      background: linear-gradient(to bottom, #001b3a, #5fbfd0);
+    }
+
+    .login-container {
+      padding: 40px;
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+      background: linear-gradient(145deg, #1f2a45, #0e1625);
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-top: 100px; /* Move o login para baixo */
+      
+    }
+
+    .logo {
+      width: 180px; /* Ajuste do tamanho do logo para telas menores */
+      margin-bottom: 20px; /* Espaço entre o logo e o título */
+    }
+
+    h2 {
+      text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.0rem; /* Tamanho da fonte bem menor */
+  color: #919da5;
+  font-weight: 300; /* Peso mais fino da fonte */
+  font-family: "Century Gothic", sans-serif; /* Fonte Century Gothic */
+    }
+
+
+    /* Posiciona os botões de WhatsApp no topo */
+    /* Ajustes para telas menores (mobile) */
+    @media (max-width: 768px) {
+      
+      
+      .login-container {
+        padding: 20px;
+  width: 80%;
+  max-width: 400px;
+  position: relative;
+  background: linear-gradient(145deg, #1f2a45, #0e1625);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 150px; /* <-- alterado aqui *
+  }
+  
+
+  .logo {
+    width: 160px; /* Ajuste do tamanho do logo para telas menores */
+    margin-bottom: 15px; /* Menos espaço entre o logo e o título */
+  }
+
+  h2 {
+    font-size: 20px; /* Reduz o tamanho do título */
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    padding: 10px; /* Diminui o padding dos campos */
+    font-size: 14px; /* Reduz o tamanho da fonte nos campos */
+  }
+
+  button {
+    padding: 10px; /* Diminui o padding do botão */
+    font-size: 14px; /* Diminui o tamanho da fonte no botão */
+  }
+}
+  .whatsapp-icons {
+    top: 5%; /* Posiciona mais perto do topo da tela */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajuste para centralizar completamente */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Menor espaçamento entre os botões */
+    z-index: 10;
+  }
+
+  .whatsapp-icons a {
+    padding: 8px 15px; /* Botões mais finos */
+    font-size: 14px; /* Fonte menor */
+  }
+
+  .whatsapp-icons img {
+    width: 30px; /* Ícones menores */
+    height: 30px;
+  }
+}
+@media (max-width: 768px) {
+body {
+    background-image: url('img/fundo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+}
+.stay-logged {
+display: flex;
+align-items: center;
+gap: 8px;
+font-size: 14px;
+color: #ccc;
+margin: 20px 0 10px; /* Aumenta o espaço acima da caixinha */
+cursor: pointer;
+
+}
